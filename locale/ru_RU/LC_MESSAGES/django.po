@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 16:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dog/apps.py:7
+msgid "Dogs info"
+msgstr "Информация о собаках"
+
+#: dog/models.py:12 dog/models.py:16 dog/models.py:37
+msgid "Breed"
+msgstr "Порода"
+
+#: dog/models.py:13
+msgid "Breeds"
+msgstr "Породы"
+
+#: dog/models.py:17
+msgid "Sorted"
+msgstr "Сортировка"
+
+#: dog/models.py:28 dog/models.py:71 shelter/models.py:31
+msgid "Dog"
+msgstr "Собака"
+
+#: dog/models.py:29
+msgid "Dogs"
+msgstr "Собаки"
+
+#: dog/models.py:34
+msgid "Female"
+msgstr "Ж"
+
+#: dog/models.py:35
+msgid "Mail"
+msgstr "М"
+
+#: dog/models.py:38
+msgid "Full name"
+msgstr "Полное имя"
+
+#: dog/models.py:39
+msgid "Nickname"
+msgstr "Кличка"
+
+#: dog/models.py:40
+msgid "Birthday"
+msgstr "День рождения"
+
+#: dog/models.py:41
+msgid "Sex"
+msgstr "Пол"
+
+#: dog/models.py:42
+msgid "Is sterilized"
+msgstr "Стерилизована"
+
+#: dog/models.py:43
+msgid "Microchip number"
+msgstr "Номер чипа"
+
+#: dog/models.py:44
+msgid "Creator"
+msgstr "Автор"
+
+#: dog/models.py:46
+msgid "Created"
+msgstr "Создано"
+
+#: dog/models.py:47
+msgid "Updated"
+msgstr "Обновлено"
+
+#: dog/models.py:62
+msgid "Dog action"
+msgstr "Действие с собакой"
+
+#: dog/models.py:63
+msgid "Dog actions"
+msgstr "События с собаками"
+
+#: dog/models.py:66
+msgid "Walk"
+msgstr "Прогулка"
+
+#: dog/models.py:67
+msgid "User action"
+msgstr "Пользовательское событие"
+
+#: dog/models.py:69
+msgid "Start action"
+msgstr "Начало события"
+
+#: dog/models.py:70
+msgid "End action"
+msgstr "Конец события"
+
+#: dog/models.py:72 shelter/models.py:51
+msgid "User"
+msgstr "Пользователь"
+
+#: shelter/apps.py:7
+msgid "Shelter info"
+msgstr "Информация о притах"
+
+#: shelter/models.py:12 shelter/models.py:30 shelter/models.py:50
+msgid "Shelter"
+msgstr "Приют"
+
+#: shelter/models.py:13
+msgid "Shelters"
+msgstr "Приюты"
+
+#: shelter/models.py:14
+msgid "Shelter name"
+msgstr "Название приюта"
+
+#: shelter/models.py:15
+msgid "Description"
+msgstr "Описание"
+
+#: shelter/models.py:26 shelter/models.py:27
+msgid "Shelter dog"
+msgstr "связь приют - собака"
+
+#: shelter/models.py:28
+msgid "Start"
+msgstr "Начало"
+
+#: shelter/models.py:29
+msgid "End"
+msgstr "Конец"
+
+#: shelter/models.py:39 shelter/models.py:40
+msgid "Shelter user"
+msgstr "Связь приют - пользователь"
+
+#: shelter/models.py:46
+msgid "Director"
+msgstr "Директор"
+
+#: shelter/models.py:47
+msgid "Guard"
+msgstr "Охраник"
+
+#: shelter/models.py:48
+msgid "Volunteer"
+msgstr "Волонтер"
+
+#: shelter/models.py:52
+msgid "Access"
+msgstr "Права доступа"
+
+#: shelter/models.py:53
+msgid "Is_active"
+msgstr "Активен"

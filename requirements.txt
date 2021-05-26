@@ -1,0 +1,6 @@
+Django
+django-split-settings
+psycopg2
+django-crispy-forms
+django-registration
+social-auth-app-django

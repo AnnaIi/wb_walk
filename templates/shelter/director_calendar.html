@@ -1,0 +1,23 @@
+{% load static %}{% load i18n %}{% include 'index.html' %}
+{% block data %}
+    <a href="{% url "director_monitor"  shelter.id%}">Монитор директора</a>
+    <h1 style="margin:20px 50px">Календарь директора</h1>
+    <table class="table">
+        <tr><th>Собака</th>
+            {% for i in all_days %}
+            <th style="text-align: center">{{ i }}</th>
+            {% endfor %}</tr>
+    {% for dog in dogs %}
+        <tr>
+        <td>{{ dog.dog }}</td>
+         {% for value in dog.values %}
+             <td style="width:70px">
+                 {% for action in value %}
+                     <div class="small">{{ action.start_action|date:"H:i" }} / {{ action.end_action|date:"H:i" }}</div>
+                 {% endfor %}
+             </td>
+            {% endfor %}
+
+        </tr>
+    {% endfor %}</table>
+{% endblock %}

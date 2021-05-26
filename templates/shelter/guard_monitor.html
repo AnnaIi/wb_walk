@@ -1,0 +1,33 @@
+{% load static %}{% load i18n %}{% include 'index.html' %}
+{% block data %}<div style="margin:20px;">
+    <h1>Монитор охранника</h1>
+    <h2>Закончить прогулку</h2>
+    <form method="post" action="{% url "end_walk" shelter.id %}">
+    {% csrf_token %}
+    <table  class="table"><tr><th></th><th>Волонтер</th><th>Собака</th><th>Время начала прогулки</th></tr>
+    {% for da in dog_actions %}
+        <tr><td><input class="form-check-input" type="checkbox" name="da" value="{{ da.id }}"></td><td>{{ da.user }}</td><td>{{ da.dog }}</td><td>{{ da.start_action }}</td></tr>
+    {%  endfor %}
+    </table>
+    <input type="submit"  class="btn btn-primary" value="Закончить прогулку"></td>
+    </form><br/>
+    <h2>Начать прогулку</h2>
+    <form method="post" action="{% url "add_walk"  shelter.id %}">
+     {% csrf_token %}
+    <table>
+        <tr><td style="vertical-align: top; padding: 10px">{% for user in users %}
+            {% if not user.user_id in user_not_show %}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="user" value="{{ user.user_id }}"> <label class="form-check-label" >{{ user.user }}</label></div>
+            {% endif %}
+        {% endfor %}</td>
+            <td style="vertical-align: top; padding: 10px">{% for dog in dogs %}
+                {% if not dog.id in dog_not_show %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="dog" value="{{ dog.id }}"> <label class="form-check-label">{{ dog }}</label></div>
+                {% endif %}
+                {% endfor %}
+            </td><td style="vertical-align: top; padding: 10px"><input type="submit"  class="btn btn-primary" value="Отправить на прогулку"></td>
+        </tr></table>
+    </form></div>
+{% endblock %}

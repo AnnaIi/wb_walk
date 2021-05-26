@@ -1,0 +1,10 @@
+{% load crispy_forms_tags %}{% load static %}{% load i18n %}{% include 'index.html' %}
+{% block data %}
+    <h1 style="margin:20px 50px">Добавить собаку</h1>
+     <form class="form-signin" method="post" style="width:500px;margin:50px; ">
+        {% csrf_token %}
+        {{ form|crispy }}
+         <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Добавить</button>
+    </form>
+{%  endblock %}

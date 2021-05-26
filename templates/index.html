@@ -1,0 +1,37 @@
+{% load static %}{% load i18n %}{% include 'base.html' %}
+{% block body %}
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static "dog.png" %}" alt=""> WB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="bi-calendar" role="img"
+                                                                                aria-label="GitHub"></i> Календарь</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi-geo-alt" role="img" aria-label="GitHub"></i>
+                                Прогулки</a>
+                        </li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                        <a href="{% url "profile" %}" class="btn btn-outline-primary bi-person"> {{ user.username }}</a>
+                    {% else %}
+                        <a class="btn btn-outline-primary" href="#">Sign up</a>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    </main><div style="padding: 50px">
+    {% block data %}
+    {% endblock %}</div>
+{% endblock %}

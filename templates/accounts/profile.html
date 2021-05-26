@@ -1,0 +1,29 @@
+{% load static %}{% load i18n %}{% include 'index.html' %}
+{% block data %}
+    <h1 style="margin:20px 50px">Кабинет пользователя</h1>
+    <ul class="list-group" style="margin-left: 50px; width: 400px">
+    {% for shelter in shelters %}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{ shelter.name }}</div>
+    </div>
+            {% if shelter.no_info %}<a href="{% url 'query_volunteer' shelter.pk %}"class="badge bg-primary rounded-pill">Хочу быть волонтером</a>
+            {% else %}
+                {% for role in shelter.roles %}
+                    {% if role.access == "d" %}
+                       <a href="{% url 'director_monitor' shelter.pk %}"class="badge bg-primary rounded-pill">Монитор директора</a>
+                    {% elif role.access == "g"%}
+                        <a href="{% url 'guard_monitor' shelter.pk %}"class="badge bg-primary rounded-pill">Монитор охранника</a>
+                    {% elif role.access == "v" and role.is_active == True %}
+                        <b class="badge bg-primary rounded-pill">Волонтерство одобрено</b>
+                    {% elif role.access == "v" and role.is_active == False %}
+                        <b class="badge bg-primary rounded-pill">Ждет одобрения</b>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+  </li>
+
+    {% endfor %}</ul>
+    <a href="{% url 'logout' %}">Выйти</a>
+{%  endblock %}
